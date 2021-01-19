@@ -32,8 +32,8 @@ equation:
 ;
 
 line: T_EOL
-    | expression T_EOL { printf("\tResult: %i\n", $1); }
-    | T_EXIT T_EOL { printf("bye!\n"); exit(0); }
+    | expression T_EOL { printf("%i\n", $1); }
+    | T_EXIT T_EOL { printf("exiting\n"); exit(0); }
 ;
 
 expression: T_INT							{ $$ = $1; }
