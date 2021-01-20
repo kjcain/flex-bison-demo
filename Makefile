@@ -7,10 +7,7 @@ run:
 	./calculator
 
 clean:
-	rm -f calculator
-	rm -f lex.yy.c
-	rm -f calculator.tab.c
-	rm -f calculator.tab.h
+	rm -f calculator lex.yy.c calculator.tab.c calculator.tab.h
 
 calculator.tab.c calculator.tab.h: calculator.y
 	bison -d calculator.y
